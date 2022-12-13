@@ -16,6 +16,15 @@ function onFormSubmit(event) {
 
   console.log(formData);
 
+  /*Окремо витягнути дані внесені в окремі елементи форми*/
+
+  const formElements = event.currentTarget.elements;
+  console.dir(formElements);
+
+  const mail = formElements.email.value;
+  console.log(mail);
+
+
   formData.forEach((value, name) => {
     console.log('onFormSubmit -> name', name);
     console.log('onFormSubmit -> value', value);

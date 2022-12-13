@@ -120,18 +120,20 @@ const cars = [{
 
 const list = document.querySelector('.js-cars');
 /* <li><img src="" alt=""><h2></h2><h3></h3><p></p></li> */
-//робимо деструктуризаці //не можемо поміщати весь масив, бо буде кома на сторінці, яка розділяє елементи масиву, тому переводимо в рядок масив
-// const markup = cars.map(({
-//     img,
-//     model,
-//     type,
-//     price
-// },idx) => `<li data-carId="${111+idx}" data-test="test" data-custom="custom">
-// <img src="${img}" alt="${model}" class="image">
-// <h2>Марка: ${model}</h2>
-// <h3>Модель ${type}</h3>
-// <p>Ціна ${price} <span>$ </span></p>
-// </li>`).join('')
+//робимо деструктуризацію
+const markup = cars.map(({
+    img,
+    model,
+    type,
+    price
+}, idx) => `<li data-carId="${111 + idx}"
+data-test = "test" data-custom = "custom">
+<img src="${img}" alt="${model}" class="image">
+<h2>Марка: ${model} </h2
+<h3>Модель: ${type} </h3>
+<p>Ціна: ${price} <span>$ </span></p>
+</li>`).join('') //не можемо поміщати весь масив, бо буде кома на сторінці, яка розділяє елементи масиву, тому переводимо в рядок масив
+
 // console.dir(markup);
 list.insertAdjacentHTML("beforeend", markup) //метод, який додає елементи
 // list.innerHTML = markup;//це властивість, яка перезаписує дані при додаванні
