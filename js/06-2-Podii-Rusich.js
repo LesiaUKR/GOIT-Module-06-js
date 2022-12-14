@@ -75,7 +75,7 @@
 //         queryValue, //для елементів форми прописуємо name в html для того, щоб дістати їх значення без querySelect
 //         selectValue
 //     } = evt.currentTarget.elements;
-//     //  const {
+//     //  const {//не хороший варіант
 // //     //     elements: {
 // //     //         queryValue: {
 // //     //             value: queryValue
@@ -83,7 +83,7 @@
 // //     //         selectValue: {
 // //     //             value: selectValue
 // //     //         }
-// //     //     } //не хороший варіант
+// //     //     } 
 //     // console.dir(evt.currentTarget.elements.queryValue);
 //     console.dir(queryValue.value);
 //     console.dir(selectValue.value);
